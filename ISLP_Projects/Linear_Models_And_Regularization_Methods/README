@@ -1,1 +1,58 @@
+# 📘 Chapter: Linear Model Selection and Regularization
+
+## 🔍 Purpose
+Improve the **prediction accuracy** and **interpretability** of linear regression models by:
+- Selecting relevant predictors
+- Applying **regularization** to avoid overfitting
+
+---
+
+## 🧠 Key Concepts
+
+### 1. Model Selection Methods
+- **Best Subset Selection**: Tries all combinations of predictors (computationally expensive).
+- **Forward Stepwise Selection**: Begins with no variables and adds them one by one.
+- **Backward Stepwise Selection**: Starts with all variables and removes them step by step.
+
+### 2. Model Assessment Criteria
+- **Cp statistic**
+- **AIC (Akaike Information Criterion)**
+- **BIC (Bayesian Information Criterion)**
+- **Adjusted R²**
+- **Validation Set Approach**
+- **Cross-Validation**
+
+---
+
+## 📏 Regularization Techniques
+
+### 3. Ridge Regression (L2 penalty)
+- Adds a penalty proportional to the **squared** magnitude of coefficients.
+- Shrinks coefficients but **does not set any to zero**.
+- Ideal when many predictors contribute and multicollinearity exists.
+
+### 4. Lasso Regression (L1 penalty)
+- Adds a penalty proportional to the **absolute** value of coefficients.
+- Can shrink some coefficients **exactly to zero** — hence does variable selection.
+- Useful when only a subset of predictors are truly relevant.
+
+---
+
+## 🔁 Bias-Variance Trade-Off
+- Regularization reduces **variance** at the cost of **increased bias**.
+- Helps models generalize better, especially in **high-dimensional** spaces.
+
+---
+
+## 📌 When to Use What
+| Scenario | Preferred Method |
+|----------|------------------|
+| All predictors contribute | Ridge Regression |
+| Only a few predictors matter | Lasso Regression |
+| Want both shrinkage & selection | Lasso |
+
+---
+
+## ✅ Summary
+This chapter emphasizes balancing **model complexity** and **predictive accuracy** using selection and shrinkage techniques. Regularization tools like **Ridge** and **Lasso** are essential for building robust models in real-world data scenarios.
 
