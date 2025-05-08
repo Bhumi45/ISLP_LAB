@@ -1,1 +1,58 @@
+# 📘 Moving Beyond Linearity
 
+> Chapter Summary from *An Introduction to Statistical Learning with Applications in Python (ISLP)*  
+> 📖 Focus: Non-linear modeling techniques that extend traditional linear regression
+
+![Status](https://img.shields.io/badge/status-complete-brightgreen)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+---
+
+## 🎯 Overview
+
+This chapter introduces techniques for modeling **non-linear relationships** between features and a response variable, allowing for better flexibility while retaining **interpretability**.
+
+---
+
+## 🧠 Key Concepts
+
+### 🔹 Polynomial Regression
+- Fits curves by adding powers of the predictor (e.g., \( X^2, X^3 \))
+- Simple but may overfit at high degrees or at the edges of the predictor range
+
+### 🔹 Step Functions
+- Breaks the predictor into bins or intervals
+- Models relationships as **piecewise constant**
+
+### 🔹 Basis Functions
+- General framework to create transformations of predictors
+- Can represent polynomial terms, step functions, or splines
+
+---
+
+## 📈 Regression Splines
+- Fit **piecewise polynomial** curves with smooth transitions at **knots**
+- **Natural splines** constrain the function at boundaries for stability
+
+### Key Advantage:
+✅ Smooth yet flexible modeling  
+✅ Prevents overfitting compared to high-degree polynomials
+
+---
+
+## 🔁 Smoothing Splines
+- Uses **many knots**, but includes a **penalty term** to avoid overfitting
+- Controlled by a **smoothing parameter \( \lambda \)**
+
+---
+
+## 📍 Local Regression
+- Fits simple models (e.g., linear) on **local neighborhoods** of data
+- Controlled via a **span (window size)**
+
+---
+
+## 🔗 Generalized Additive Models (GAMs)
+```math
+Y = \beta_0 + f_1(X_1) + f_2(X_2) + \dots + f_p(X_p) + \epsilon
